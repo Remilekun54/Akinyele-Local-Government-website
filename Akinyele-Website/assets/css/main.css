@@ -96,6 +96,17 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.triangle {
+  display: inline-block;
+  width: 5;
+  height: 5;
+  border-left: 6px solid transparent;   /* adjust size */
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #000;       /* color of the triangle */
+  margin: 10px;
+  
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -812,13 +823,13 @@ section,
 }
 
 .hero img {
-  position: absolute;
+  position:relative;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: -1;
 }
 
 .hero .carousel-item {
@@ -975,7 +986,7 @@ section,
 
 .about .our-story {
   padding: 40px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
 }
 
 @media (min-width: 991px) {
@@ -2626,4 +2637,202 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*-------my own styling -------*/
+
+.story-divider {
+  border: 0;
+  height: 2px;
+  background:  var(--accent-color);
+  margin: 20px 0;
+}
+
+.info-section {
+  background: #ececec;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 25px;
+  height: 100%; /* keeps cards equal height in a row */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(176, 212, 238, 0.1);
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.info-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.info-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/*------------------- Chain like section start -------------------------------------------*/
+.chain-section {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.chain-item {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chain-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chain-content h2 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.chain-content p,
+.chain-content ul {
+  color: #444;
+  line-height: 1.7;
+}
+
+.chain-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chain-content ul li {
+  padding: 6px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.chain-content ul li::before {
+  content: "0"; /* chain link emoji as bullet */
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  margin-right: 90px;
+}
+
+.chain-rope {
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--accent-color), transparent);
+  margin: 0 auto 40px;
+  border-radius: 3px;
+}
+
+/*------------------- Chain like section end -------------------------------------------*/
+
+/*----------------------------------team--organogram strcuture */
+.org-chart {
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.org-level::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  background: #555;
+}
+
+.org-level.top::before {
+  display: none; /* No line above Chairman */
+}
+
+.member {
+  background: #fff;
+  border: 2px solid  var(--accent-color);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 15px;
+  min-width: 160px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  color:  var(--accent-color);
+}
+
+.member span {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Connector lines between members */
+.org-level.mid .member::before,
+.org-level.bottom .member::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #555;
+}
+
+.org-level.mid::after,
+.org-level.bottom::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #555;
+  z-index: -1;
 }
