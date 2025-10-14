@@ -3013,7 +3013,6 @@ section,
   justify-content: center;
   padding: 40px 20px;
   background: #eefff1;
- 
   border-radius: 20px;
 }
 
@@ -3021,8 +3020,7 @@ section,
   position: relative;
   width: 100%;
   max-width: var(--video-max-width);
-  aspect-ratio: 16/9;
-  /* keeps 16:9 ratio */
+  aspect-ratio: 16/9; /* default desktop ratio */
   background: #000;
   border-radius: 12px;
   overflow: hidden;
@@ -3071,6 +3069,21 @@ section,
   display: none;
 }
 
+/* For small screens (phones) — make video taller */
+@media (max-width: 768px) {
+  .video-wrap {
+    aspect-ratio: 3/4; /* taller portrait-like aspect */
+  }
+}
+
+/* For very small phones (extra height) */
+@media (max-width: 480px) {
+  .video-wrap {
+    aspect-ratio: 2/3; /* even taller for smaller screens */
+  }
+}
+
+/* Adjust button on small screens */
 @media (max-width: 640px) {
   .video-unmute {
     bottom: 10px;
