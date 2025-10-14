@@ -192,3 +192,36 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+
+/** the video auto playing js */
+
+(function () {
+    const btn = document.getElementById('video-unmute-btn');
+    const iframe = document.getElementById('yt-autoplay');
+    const wrap = document.querySelector('.video-wrap');
+
+    // If user clicks, reload the iframe with sound enabled.
+    btn.addEventListener('click', () => {
+      // Build new src with mute=0 and keep autoplay=1
+      const src = new URL(iframe.src);
+      src.searchParams.set('mute', '0');       // enable sound
+      src.searchParams.set('autoplay', '1');   // keep autoplay
+      // Set iframe src to reload it with sound
+      iframe.src = src.toString();
+
+      // Add class to hide the overlay
+      wrap.classList.add('sound-on');
+
+      // Give focus to the iframe for accessibility
+      iframe.focus({ preventScroll: true });
+    });
+
+    // Accessibility: allow keyboard activation
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  })();

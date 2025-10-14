@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Nunito",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Nunito", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #111111; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1bbd36; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #111111;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1bbd36;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1bbd36; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1bbd36; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #444444;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #1bbd36;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1bbd36;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -100,11 +112,13 @@ h6 {
   display: inline-block;
   width: 5;
   height: 5;
-  border-left: 6px solid transparent;   /* adjust size */
+  border-left: 6px solid transparent;
+  /* adjust size */
   border-right: 6px solid transparent;
-  border-bottom: 10px solid #000;       /* color of the triangle */
+  border-bottom: 10px solid #000;
+  /* color of the triangle */
   margin: 10px;
-  
+
 }
 
 /* PHP Email Form Messages
@@ -781,6 +795,7 @@ section,
   text-transform: uppercase;
   padding-bottom: 20px;
   position: relative;
+  margin-top: 20px;
 }
 
 .section-title h2:after {
@@ -804,9 +819,7 @@ section,
 
 /* ----------------------------------------------*/
 /* Hero carousel cover full width and 90% height */
-----------------------------------------------*/
-
-#hero {
+----------------------------------------------*/ #hero {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -841,6 +854,7 @@ section,
   height: 100%;
   object-fit: contain;
   object-position: center;
+
 }
 
 /* ✅ Text content styling */
@@ -855,7 +869,8 @@ section,
 }
 
 .hero-content h2 {
-  color: #2ae149; /* green heading */
+  color: #2ae149;
+  /* green heading */
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -864,9 +879,12 @@ section,
 .btn-get-started {
   background-color: #2ae149;
   color: #fff;
-  width: 130px;          /* fixed width instead of full */
-  text-align: center;    /* center text */
-  padding: 10px 0;       /* top & bottom padding only */
+  width: 130px;
+  /* fixed width instead of full */
+  text-align: center;
+  /* center text */
+  padding: 10px 0;
+  /* top & bottom padding only */
   border: 2px solid #2ae149;
   border-radius: 6px;
   font-weight: 600;
@@ -901,7 +919,8 @@ section,
   #hero-carousel img {
     width: 100%;
     height: auto;
-    max-height: 40vh; /* keeps image visible */
+    max-height: 40vh;
+    /* keeps image visible */
   }
 
   .hero-content {
@@ -1026,7 +1045,19 @@ section,
   object-position: center;
   z-index: 1;
 }
-
+@media (min-width: 992px) {
+.about .about-img img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  margin-top: 120px;
+}
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1338,6 +1369,20 @@ section,
   overflow: hidden;
   border-radius: 5px;
 }
+
+.member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  /* keeps image proportions while filling the box */
+  border-radius: 10%;
+  /* makes it circular */
+  border: 2px solid #c0abf5;
+  /* optional: adds a soft border */
+  margin-bottom: 10px;
+  /* optional: adds space below image */
+}
+
 
 .team .team-member .member-img {
   position: relative;
@@ -2599,7 +2644,7 @@ section,
 .story-divider {
   border: 0;
   height: 2px;
-  background:  var(--accent-color);
+  background: var(--accent-color);
   margin: 20px 0;
 }
 
@@ -2608,7 +2653,8 @@ section,
   border-left: 5px solid var(--accent-color);
   border-radius: 12px;
   padding: 25px;
-  height: 100%; /* keeps cards equal height in a row */
+  height: 100%;
+  /* keeps cards equal height in a row */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -2646,148 +2692,389 @@ section,
 }
 
 /*------------------- Chain like section start -------------------------------------------*/
-.chain-section {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
-
-.chain-item {
-  position: relative;
-  background: #fff;
-  border-radius: 15px;
-  padding: 25px 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-  margin-bottom: 40px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.chain-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-.chain-content h2 {
-  font-size: 1.6rem;
-  color: var(--accent-color);
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.chain-content p,
-.chain-content ul {
-  color: #444;
-  line-height: 1.7;
-}
-
-.chain-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.chain-content ul li {
-  padding: 6px 0;
-  position: relative;
-  padding-left: 20px;
-}
-
-.chain-content ul li::before {
-  content: "0"; /* chain link emoji as bullet */
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  margin-right: 90px;
-}
-
-.chain-rope {
-  width: 3px;
-  height: 50px;
-  background: linear-gradient(to bottom, var(--accent-color), transparent);
-  margin: 0 auto 40px;
-  border-radius: 3px;
-}
-
-/*------------------- Chain like section end -------------------------------------------*/
-
-/*----------------------------------team--organogram strcuture */
 .org-chart {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
   position: relative;
-  padding: 40px 20px;
 }
 
 .org-level {
   display: flex;
   justify-content: center;
-  margin: 40px 0;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
   position: relative;
 }
 
-.org-level::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 30px;
-  background: #555;
-}
-
-.org-level.top::before {
-  display: none; /* No line above Chairman */
-}
-
-.member {
-  background: #fff;
-  border: 2px solid  var(--accent-color);
+.member,
+.branch {
+  background: #ffffff;
+  border: 2px solid #2ae149;
   border-radius: 10px;
-  padding: 15px;
-  margin: 0 15px;
-  min-width: 160px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
   position: relative;
+  z-index: 2;
 }
 
-.member img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.member:hover,
+.branch:hover {
+  transform: translateY(-5px);
+  border-color: #dee12a;
 }
 
-.member h4 {
-  margin: 5px 0;
-  font-size: 16px;
-  color:  var(--accent-color);
+.member h4,
+.branch h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1px;
+  color: #000000;
+  font-weight: 600;
 }
 
-.member span {
-  font-size: 14px;
-  color: #444;
-}
-
-/* Connector lines between members */
-.org-level.mid .member::before,
-.org-level.bottom .member::before {
+/* Lines between levels */
+.org-level:not(:first-child)::before {
   content: "";
   position: absolute;
   top: -30px;
   left: 50%;
   width: 2px;
   height: 30px;
-  background: #555;
+  background: #ccc;
+  transform: translateX(-50%);
 }
 
-.org-level.mid::after,
-.org-level.bottom::after {
+/* Line from Chairman to Legislative Council (side) */
+.org-level.top .side {
+  position: absolute;
+  right: -310px;
+  top: 0;
+}
+
+.org-level.top .side::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  width: 50px;
+  height: 2px;
+  background: #ccc;
+}
+
+/* ------------------ Branch connection lines ------------------ */
+/* Default hidden for all branches */
+.branch::before {
+  content: none;
+}
+
+/* Only show connector for Supervisor Agric */
+.branch.supervisor-agric::before {
   content: "";
   position: absolute;
   top: -30px;
-  left: 0;
-  right: 0;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #d41515;
+  transform: translateX(-50%);
+}
+
+/* ------------------ Connecting branches under Secretary ------------------ */
+.org-level.dual::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 2px;
+  height: 70px;
+  background: #ccc;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* horizontal connector that spans between branches */
+.org-level.dual::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  right: 15%;
   height: 2px;
-  background: #555;
-  z-index: -1;
+  background: #ccc;
+  z-index: 1;
+}
+
+/* ------------------ Fifth Level Connections ------------------ */
+.branch ul {
+  position: relative;
+  margin-top: 5px;
+  padding-top: 1px;
+}
+
+.branch ul li {
+  background: #f9fdf9;
+  border: 1px solid #20f020;
+  border-radius: 6px;
+  padding: 8px 10px 8px 25px;
+  margin: 8px 0;
+  font-size: 0.92rem;
+  color: #333;
+  position: relative;
+  list-style-type: none;
+  /* ✅ Double assurance that no dot appears */
+  text-align: left;
+}
+
+.branch ul li::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 2px;
+  height: 10px;
+  background: #ccc;
+}
+
+.branch ul li::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #2ae149;
+  border-radius: 50%;
+}
+
+/* ------------------ Responsive Adjustments ------------------ */
+@media (max-width: 768px) {
+  .org-chart {
+    gap: 40px;
+  }
+
+  .member,
+  .branch {
+    width: 90%;
+  }
+
+  .org-level.top .side {
+    position: static;
+  }
+
+  .org-level.top .side::before {
+    display: none;
+  }
+
+  .org-level.dual::before {
+    top: -30px;
+    height: 30px;
+  }
+
+  .org-level.dual::after {
+    left: 10%;
+    right: 10%;
+  }
+
+  .branch.supervisor-agric::before {
+    top: -6px;
+    height: 6px;
+  }
+}
+
+/*------------------- Chain like section end -------------------------------------------*/
+
+
+
+
+/*-------------------------This is the style for about us, our history section-------------------------*/
+/* ===== CHAIN SECTION STYLING ===== */
+.chain-section {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+/* Each content card */
+.chain-item {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chain-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.chain-content h2 {
+  color: #1bbd36;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  border-left: 5px solid #2196f3;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+.chain-content p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.chain-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.chain-content ul li {
+  background: #eef3ff;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 0.97rem;
+  transition: background 0.3s ease;
+}
+
+.chain-content ul li b {
+  color: rgb(49, 122, 248);
+}
+
+.chain-content ul li:hover {
+  background: #9ff4ad;
+}
+
+/* The connecting chain line */
+.chain-rope {
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(to bottom, #1bbd36, #64b5f6);
+  border-radius: 2px;
+  margin: 25px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chain-item {
+    padding: 20px;
+  }
+
+  .chain-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .chain-content p,
+  .chain-content ul li {
+    font-size: 0.95rem;
+  }
+
+  .chain-rope {
+    height: 40px;
+  }
+}
+
+/*-------------------------This is the end of the style for about us, our history section-------------------------*/
+
+/*----------------------the video section of the hompeag-------------------------------*/
+
+
+:root {
+  --video-max-width: 1100px;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #eefff1;
+ 
+  border-radius: 20px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: var(--video-max-width);
+  aspect-ratio: 16/9;
+  /* keeps 16:9 ratio */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(18, 38, 63, 0.08);
+}
+
+/* Responsive iframe fills the container */
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Unmute / play button overlay */
+.video-unmute {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+.video-unmute:hover {
+  transform: translateX(-50%) translateY(-3px);
+}
+
+.video-unmute:active {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hide the overlay after user clicks (we toggle a class via JS) */
+.video-wrap.sound-on .video-unmute {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .video-unmute {
+    bottom: 10px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
 }
