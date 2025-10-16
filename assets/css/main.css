@@ -1058,6 +1058,38 @@ section,
   margin-top: 120px;
 }
 }
+
+/* carousel in about page */
+
+.about {
+  background-color: #f7fff9;
+  border-radius: 20px;
+}
+
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.accordion-button {
+  background-color: #e9fbe9;
+  color: #0a3d0a;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #c9f7c9;
+  color: #0a3d0a;
+}
+
+.accordion-body {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -2967,6 +2999,42 @@ section,
 .chain-content ul li:hover {
   background: #9ff4ad;
 }
+
+/* thse tyle for the table of wards */
+.wards-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .wards-table th, .wards-table td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  .wards-table th {
+    background-color: #007b5e;
+    color: white;
+    font-weight: bold;
+  }
+
+  .wards-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .wards-table tr:hover {
+    background-color: #eef9f0;
+  }
+
+  @media (max-width: 768px) {
+    .wards-table th, .wards-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  
 
 /* The connecting chain line */
 .chain-rope {
