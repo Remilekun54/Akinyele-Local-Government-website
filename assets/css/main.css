@@ -1045,18 +1045,19 @@ section,
   object-position: center;
   z-index: 1;
 }
+
 @media (min-width: 992px) {
-.about .about-img img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
-  margin-top: 120px;
-}
+  .about .about-img img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    margin-top: 120px;
+  }
 }
 
 /* carousel in about page */
@@ -1419,7 +1420,36 @@ section,
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+  height: 250px;
+  width: 100%;
 }
+
+.team .team-member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Fix for small screens — center and show full image */
+@media (max-width: 768px) {
+  .team .team-member {
+    display: flex;
+    justify-content: center;
+  }
+
+  .team .team-member .member-img {
+    width: 60%;
+    margin: 0 auto;
+    height: auto; /* allow height to adjust naturally */
+  }
+
+  .team .team-member .member-img img {
+    width: 100%;
+    height: auto; /* ensures full image is visible */
+    object-fit: contain; /* shows the full image without cropping */
+  }
+}
+
 
 .team .team-member .social {
   position: absolute;
@@ -1461,6 +1491,17 @@ section,
   padding: 25px 15px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .team .team-member .member-info {
+    text-align: center;       /* centers text inside */
+    display: flex;            /* allows flex alignment */
+    flex-direction: column;   /* stack content vertically */
+    align-items: center;      /* centers horizontally */
+    justify-content: center;  /* centers vertically if needed */
+    margin: 0 auto;           /* ensures the whole block is centered */
+  }
+}
+
 
 .team .team-member .member-info h4 {
   font-weight: 700;
@@ -2785,7 +2826,7 @@ section,
 /* Line from Chairman to Legislative Council (side) */
 .org-level.top .side {
   position: absolute;
-  right: -310px;
+  right: -250px;
   top: 0;
 }
 
@@ -2901,7 +2942,18 @@ section,
   }
 
   .org-level.top .side::before {
-    display: none;
+    content: "";
+    position: absolute;
+    bottom: 90px;
+    /* adjust how high the line starts */
+    left: 50%;
+    /* center the line horizontally */
+    transform: translateX(-50%);
+    width: 2px;
+    /* make it vertical (thin width) */
+    height: 30px;
+    /* length of the vertical line */
+    background: #ccc;
   }
 
   .org-level.dual::before {
@@ -2918,6 +2970,8 @@ section,
     top: -6px;
     height: 6px;
   }
+
+
 }
 
 /*------------------- Chain like section end -------------------------------------------*/
@@ -3002,39 +3056,42 @@ section,
 
 /* thse tyle for the table of wards */
 .wards-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .wards-table th, .wards-table td {
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    text-align: left;
-  }
+.wards-table th,
+.wards-table td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  text-align: left;
+}
 
-  .wards-table th {
-    background-color: #007b5e;
-    color: white;
-    font-weight: bold;
-  }
+.wards-table th {
+  background-color: #007b5e;
+  color: white;
+  font-weight: bold;
+}
 
-  .wards-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
+.wards-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
 
-  .wards-table tr:hover {
-    background-color: #eef9f0;
-  }
+.wards-table tr:hover {
+  background-color: #eef9f0;
+}
 
-  @media (max-width: 768px) {
-    .wards-table th, .wards-table td {
-      padding: 8px;
-      font-size: 14px;
-    }
+@media (max-width: 768px) {
+
+  .wards-table th,
+  .wards-table td {
+    padding: 8px;
+    font-size: 14px;
   }
-  
+}
+
 
 /* The connecting chain line */
 .chain-rope {
@@ -3088,7 +3145,8 @@ section,
   position: relative;
   width: 100%;
   max-width: var(--video-max-width);
-  aspect-ratio: 16/9; /* default desktop ratio */
+  aspect-ratio: 16/9;
+  /* default desktop ratio */
   background: #000;
   border-radius: 12px;
   overflow: hidden;
@@ -3140,14 +3198,16 @@ section,
 /* For small screens (phones) — make video taller */
 @media (max-width: 768px) {
   .video-wrap {
-    aspect-ratio: 3/4; /* taller portrait-like aspect */
+    aspect-ratio: 3/4;
+    /* taller portrait-like aspect */
   }
 }
 
 /* For very small phones (extra height) */
 @media (max-width: 480px) {
   .video-wrap {
-    aspect-ratio: 2/3; /* even taller for smaller screens */
+    aspect-ratio: 2/3;
+    /* even taller for smaller screens */
   }
 }
 
