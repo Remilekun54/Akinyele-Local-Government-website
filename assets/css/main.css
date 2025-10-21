@@ -1440,13 +1440,16 @@ section,
   .team .team-member .member-img {
     width: 60%;
     margin: 0 auto;
-    height: auto; /* allow height to adjust naturally */
+    height: auto;
+    /* allow height to adjust naturally */
   }
 
   .team .team-member .member-img img {
     width: 100%;
-    height: auto; /* ensures full image is visible */
-    object-fit: contain; /* shows the full image without cropping */
+    height: auto;
+    /* ensures full image is visible */
+    object-fit: contain;
+    /* shows the full image without cropping */
   }
 }
 
@@ -1491,14 +1494,21 @@ section,
   padding: 25px 15px;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .team .team-member .member-info {
-    text-align: center;       /* centers text inside */
-    display: flex;            /* allows flex alignment */
-    flex-direction: column;   /* stack content vertically */
-    align-items: center;      /* centers horizontally */
-    justify-content: center;  /* centers vertically if needed */
-    margin: 0 auto;           /* ensures the whole block is centered */
+    text-align: center;
+    /* centers text inside */
+    display: flex;
+    /* allows flex alignment */
+    flex-direction: column;
+    /* stack content vertically */
+    align-items: center;
+    /* centers horizontally */
+    justify-content: center;
+    /* centers vertically if needed */
+    margin: 0 auto;
+    /* ensures the whole block is centered */
   }
 }
 
@@ -3162,6 +3172,19 @@ section,
   border: 0;
 }
 
+.video-wrap iframe,
+.video-wrap video {
+  position: absolute;
+  /* Allows element to stretch independent of flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Fill the wrapper's width */
+  height: 100%;
+  /* Fill the wrapper's height */
+  border: none;
+}
+
 /* Unmute / play button overlay */
 .video-unmute {
   position: absolute;
@@ -3198,7 +3221,7 @@ section,
 /* For small screens (phones) — make video taller */
 @media (max-width: 768px) {
   .video-wrap {
-    aspect-ratio: 3/4;
+    aspect-ratio: 16/9;
     /* taller portrait-like aspect */
   }
 }
@@ -3206,7 +3229,7 @@ section,
 /* For very small phones (extra height) */
 @media (max-width: 480px) {
   .video-wrap {
-    aspect-ratio: 2/3;
+    aspect-ratio: 16/9;
     /* even taller for smaller screens */
   }
 }
@@ -3215,7 +3238,7 @@ section,
 @media (max-width: 640px) {
   .video-unmute {
     bottom: 10px;
-    padding: 8px 12px;
+    padding: 5px 10px;
     font-size: 0.95rem;
   }
 }
