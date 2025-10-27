@@ -1,0 +1,728 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Akinyele Local Government Council</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+
+  <link href="{% static 'img/logo/favicon-32x32.png' %}" rel="icon">
+  <link href="{% static 'img/logo/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name:  Ormd-Data Lab Company
+  * Template URL: https://www.linkedin.com/in/olaniyan-remilekun-a40032187
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: Ormd-Datalab Company/ Olaniyan Remilekun Desmond
+  * License: https://www.linkedin.com/in/olaniyan-remilekun-a40032187
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <img src="{% static 'img/others/akinyele_logo.jpg' %}" alt="">
+
+        <h1 class="sitename">Akinyele L.G.A.</h1><span class="triangle"></span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'current' %}">Current Administration</a></li>
+              <li><a href="{% url 'team' %}">Past Administration</a></li>
+              <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+
+              <li class="dropdown"><a href="#"><span>Department</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Administration and General Services</a></li>
+                  <li><a href="#">Finance and Supplies</a></li>
+                  <li><a href="#">Education and Social Services</a></li>
+                  <li><a href="#">Works and Transport</a></li>
+                  <li><a href="#">Primary Health Care</a></li>
+                  <li><a href="#">Environmental and Health Services</a></li>
+                  <li><a href="#">Budget, Planning, Research, and Statistics</a></li>
+                  <li><a href="#">Agriculture and Natural Resources</a></li>
+                  <li><a href="#">Youth and Sports</a></li>
+                  <li><a href="#">Women's Affairs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="{% url 'services' %}">Work-Done</a></li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+          <li><a href="{% url 'contact_page' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <img style="margin-left: 50px;" src="{% static 'img/logo/oyostatelogo.jpg' %}" alt="">
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Carousel Indicators -->
+
+
+
+        <!-- Carousel Item 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-stretch g-0 h-100">
+            <!-- Image Column -->
+            <div class="col-lg-6 col-12 d-flex">
+              <img src="{% static 'img/others/inspection.png' %}" alt="Hero Image"
+                class="w-100 h-100 object-fit-contain">
+            </div>
+            <!-- Text Column -->
+            <div class="col-lg-6 col-12 d-flex">
+              <div class="hero-content p-4 w-100 d-flex flex-column justify-content-center">
+                <h2>The Heart of Progress in Akinyele LGA, Oyo State</h2>
+                <p>
+                  At Akinyele Local Government, we are building a vibrant, prosperous community where
+                  tradition and innovation meet to create a brighter future for all. Situated at the vibrant
+                  core of Oyo State, Akinyele Local Government is a dynamic hub where we honor our rich
+                  heritage while fearlessly building the future, forging a path of progress that uplifts every
+                  resident.
+                </p>
+                <a href="about.html" class="btn-get-started align-self-start">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Carousel Item 1 -->
+
+        <!-- Carousel Item 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-stretch g-0 h-100">
+            <div class="col-lg-6 col-12 d-flex">
+              <img src="{% static 'img/hero-carousel/02.png' %}" alt="Hero 2" class="w-100 h-100 object-fit-contain">
+            </div>
+            <div class="col-lg-6 col-12 d-flex">
+              <div class="hero-content p-4 w-100 d-flex flex-column justify-content-center">
+                <h2>The Soul of Akinyele's Growth</h2>
+                <p>
+                  Akinyele isn't just a place to live; it's a living tapestry of diverse cultures and aspirations.
+                  Our community is a welcoming home for all, a powerful force fueling the economic engine of
+                  Oyo State with commerce, agriculture, and shared prosperity.
+                </p>
+                <a href="about.html" class="btn-get-started">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Carousel Item 2 -->
+
+        <!-- Carousel Item 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-stretch g-0 h-100">
+            <div class="col-lg-6 col-12 d-flex">
+              <img src=" {% static 'img/hero-carousel/03.png' %} " alt="Hero 3" class="w-100 h-100 object-fit-contain">
+            </div>
+            <div class="col-lg-6 col-12 d-flex">
+              <div class="hero-content p-4 w-100 d-flex flex-column justify-content-center">
+                <h2>Charting a Course for a Prosperous Future</h2>
+                <p>
+                  Our leadership stands as your dedicated partner in progress, tirelessly implementing bold,
+                  strategic projects that are not just promises but tangible realities, laying the foundation
+                  for a legacy of prosperity and well-being for generations to come.
+                </p>
+                <a href="about.html" class="btn-get-started">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Carousel Item 3 -->
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section><!-- /Hero Section -->
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row position-relative">
+
+          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img
+              src=" {% static 'img/others/pre.png' %} ">
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="inner-title">Welcome to Akinyele Local Government</h2>
+            <div class="our-story">
+              <h4>Est 1976</h4>
+              <h3>Our Story</h3>
+              <p>Welcome to the official website of Akinyele Local Government, the heart of progress and community in
+                Ibadan, Oyo State. Akinyele is more than just a place on the map; it is a vibrant hub of culture,
+                enterprise, and opportunity. Established in 1976, Akinyele was carved out of the former Ibadan Municipal
+                Government and has since grown into a metropolitan area where tradition and modernity coexist
+                harmoniously.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>We are the power house of change</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>We integrate Artificial Intelligence to Governance</span>
+                </li>
+                <li><i class="bi bi-check-circle"></i> <span>We are the pace setter</span></li>
+              </ul>
+              <p>Our Vision is to be the most prosperous and progressive local government in Oyo State, driven by a
+                commitment to good governance, sustainable development, and community well-being.</p>
+
+              <div class="watch-video d-flex align-items-center position-relative">
+                <i class="bi bi-play-circle"></i>
+                <a href="https://www.youtube.com/embed/2k-UWbSHHGQ?autoplay=1&mute=1&rel=0&controls=1&playsinline=1"
+                  class="glightbox stretched-link">Watch Video</a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                  </path>
+                </svg>
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Infrastructural Projects</h3>
+              </a>
+              <p style="text-align: justify; font-size: 14px;">We have transformed our communities with impactful
+                infrastructure projects that enhance growth, safety,
+                and accessibility.</p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Renovation of Legislative Building</li>
+                <li>✅ Commissioning of Akinyele Gate</li>
+                <li>✅ Motorized Borehole Drilling at Oke Bank Moniya</li>
+                <li>✅ Construction of a Block of three Classroom at Community Primary School, Sagbe, Moniya, Ibadan</li>
+                <li>✅ Facilitated Block of Classroom through CSDA at HLA Primary School, Ojoo</li>
+                <li>✅ Construction of Permanent Moniya Police Area Command Headquarters, Temidire, Rehab Center Moniya,
+                  Ibadan</li>
+                <li>✅ Construction of Aduloju-LivingSpring Asphalt Road</li>
+                <li>✅ Facilitated Borehole Drilling at Olanla CSDA</li>
+              </ul>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
+                  </path>
+                </svg>
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>HEALTH</h3>
+              </a>
+              <p style="text-align: justify; font-size: 14px;">We improved healthcare through free schemes,
+                sensitizations, renovations, and modern medical support.
+              </p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Free Health Scheme for Residents</li>
+                <li>✅ Cholera sensitization across Akinyele Local Government markets</li>
+                <li>✅ Presentation of Heart start Machine to Primary Health Care Center, Moniya</li>
+                <li>✅ Ongoing Renovation of Orogun Health Centre/Maternity centre</li>
+                <li>✅ Lightening up of Orogun Health centre/Maternity Centre</li>
+                <li>✅ Regular Sensitization on Good Hygiene across Markets</li>
+                <li>✅ Sensitization on Gender Based Violence across Akinyele L.G Markets</li>
+              </ul>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
+                  </path>
+                </svg>
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3> COMMUNITY ENGAGEMENT </h3>
+              </a>
+              <p style="text-align: justify; font-size: 14px;">We engaged traditional leaders, supported communities,
+                and strengthened grassroots development
+                structures.</p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Restructuring of CDC/CDAs</li>
+                <li>✅ Constant Engagement with Akinyele L.G Traditional Council</li>
+                <li>✅ Distribution of Palliatives to social and religious groups across communities</li>
+                <li>✅ Presentation of Community Registration Certificate to Various Communities</li>
+                <li>✅ Provision of office equipment to CDC Excos</li>
+              </ul>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>ECONOMY (TRADE, COMMERCE\IGR)</h3>
+              </a>
+
+              <p style="text-align: justify; font-size: 14px;">We boosted commerce, supported businesses, and improved
+                revenue generation for sustainable development.
+              </p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Revenue Harmonization</li>
+                <li>✅ Construction of Ultra Modern Shopping Complex, Moniya Ibadan</li>
+                <li>✅ Setting up of Cooperative Society to Support Residents Businesses</li>
+              </ul>
+            </div>
+          </div><!-- End Service Item -->
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
+                  </path>
+                </svg>
+                <i class="bi bi-calendar4-week icon"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>ENERGY</h3>
+              </a>
+              <p style="text-align: justify; font-size: 14px;">We provided electricity, solar installations, and
+                financial support to power communities.</p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Lightening up of Akinyele LG Council Secretariat, Moniya, Ibadan</li>
+                <li>✅ Solar light Installation at Akingbile-Oluana, Lagbeja entrance gate</li>
+                <li>✅ Lightening up of various Communities</li>
+                <li>✅ Rural electrification</li>
+                <li>✅ Provision of Cash Support for electrification of Various Communities</li>
+              </ul>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                  </path>
+                </svg>
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Empowerment</h3>
+              </a>
+              <p style="text-align: justify; font-size: 14px;">We empowered widows, youths, and residents through
+                financial aid, grants, and social support programs.
+              </p>
+              <ul style="text-align: justify; font-size: 14px;">
+                <li>✅ Widow and Youth Empowerment</li>
+                <li>✅ Empowerment of Breastfeeding Women</li>
+                <li>✅ Facilitated Various Grant Initiatives for Residents</li>
+                <li>✅ Cash Empowerment for Residents</li>
+              </ul>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Past Works</h2>
+        <p>Some of the projects we have done and our achievements</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Infrastructure</li>
+            <li data-filter=".filter-product">Agriculture</li>
+            <li data-filter=".filter-branding">Empowerment</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src=" {% static 'img/pic/01.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>100 Days In Office</h4>
+                <p>Projects Done in 100 Days</p>
+                <a href=" {% static 'img/pic/02.jpg' %}" title="App 1" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'img/pic/03.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>MOU Signing</h4>
+                <p>Partnering with International bodies</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-2.jpg' %}" title="Product 1"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'img/pic/04.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Borehole Project</h4>
+                <p>Launching of Borehole project</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-3.jpg' %} " title="Branding 1"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src=" {% static 'img/pic/05.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Road Project Inspection</h4>
+                <p>Inspection of road projects</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-4.jpg' %} " title="App 2"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src=" {% static 'img/pic/06.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Grading of Road</h4>
+                <p>Grading of major roads</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-5.jpg' %} " title="Product 2"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src=" {% static 'img/pic/07.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Care Project</h4>
+                <p>Hosting Healthcare Programs</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-6.jpg' %}" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src=" {% static 'img/pic/08.jpg' %} " class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Foundation Laying</h4>
+                <p>Laying of awesome foundation</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-7.jpg' %} " title="App 3"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src=" {% static 'img/pic/09.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Securit Enhancement</h4>
+                <p>Enhancing and Strethening of Security</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-8.jpg' %} " title="Product 3"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src=" {% static 'img/pic/10.jpg' %} " class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-9.jpg' %} " title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>The Video of our past works</h2>
+          <p> Watch Some of the projects we have done and our achievements over the past years.</p>
+        </div><!-- End Section Title -->
+        <!-- AUTOPLAY YOUTUBE SECTION (responsive, muted autoplay + unmute button) -->
+        <section id="hero-video" class="video-section" aria-label="Intro video">
+          <div class="video-wrap">
+            <iframe id="yt-autoplay"
+              src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1&mute=1&rel=0&controls=1&playsinline=1"
+              title="Intro video" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen></iframe>
+
+            <button id="video-unmute-btn" class="video-unmute" aria-label="Unmute video">
+              ▶️ Play with sound
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Some Partners</h2>
+        <p>Here are some of the organisations/Institutions that have partnered with us over time.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0 clients-wrap">
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="{% static 'img/clients/client-1.png' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="{% static 'img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src=" {% static 'img/clients/client-3.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="{% static 'img/clients/ormd-logo.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src=" {% static 'img/clients/client-5.png' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src=" {% static 'img/clients/client-6.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="{% static 'img/clients/client-7.png' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src=" {% static 'img/clients/unicornlogo.png' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Akinyele Local Government</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>P.O.Box 515 Ojo-Moniya</p>
+            <p>Akinyele LG Secretariate, Moniya, Ibadan, Oyo State</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+234 7068 186 943, </span> <br><span>+234 8139 040 991</span>
+            </p>
+            <p><strong>Email:</strong> <span>akinyelelgc@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Work-Done</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Work-Done/Projects</h4>
+          <ul>
+            <li><a href="#">FS4A Project for Food Safety</a></li>
+            <li><a href="#">Agribusiness Industrial Hubs</a></li>
+            <li><a href="#">Infrastructure Development</a></li>
+            <li><a href="#">Road Infrastructure</a></li>
+            <li><a href="#">Ilutuntun City Project</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our progress and opportunities</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Akinyele Local Government</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://ormddatalab.bss.design/">Ormd-Datalab</a> Managed by <a
+          href="https://www.linkedin.com/in/olaniyan-remilekun-a40032187">Olaniyan Remilekun Desmond</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <!-- Main JS File -->
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

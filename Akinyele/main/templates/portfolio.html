@@ -1,0 +1,570 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Akinyele Local Government Council</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+
+  <link href="{% static 'img/logo/favicon-32x32.png' %}" rel="icon">
+  <link href="{% static 'img/logo/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name:  Ormd-Data Lab Company
+  * Template URL: https://www.linkedin.com/in/olaniyan-remilekun-a40032187
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: Ormd-Datalab Company/ Olaniyan Remilekun Desmond
+  * License: https://www.linkedin.com/in/olaniyan-remilekun-a40032187
+  ======================================================== -->
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <img src="{% static 'img/others/akinyele_logo.jpg' %}" alt="">
+
+        <h1 class="sitename">Akinyele L.G.A.</h1><span class="triangle"></span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'current' %}">Current Administration</a></li>
+              <li><a href="{% url 'team' %}">Past Administration</a></li>
+              <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+
+              <li class="dropdown"><a href="#"><span>Department</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Administration and General Services</a></li>
+                  <li><a href="#">Finance and Supplies</a></li>
+                  <li><a href="#">Education and Social Services</a></li>
+                  <li><a href="#">Works and Transport</a></li>
+                  <li><a href="#">Primary Health Care</a></li>
+                  <li><a href="#">Environmental and Health Services</a></li>
+                  <li><a href="#">Budget, Planning, Research, and Statistics</a></li>
+                  <li><a href="#">Agriculture and Natural Resources</a></li>
+                  <li><a href="#">Youth and Sports</a></li>
+                  <li><a href="#">Women's Affairs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="{% url 'services' %}">Work-Done</a></li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+          <li><a href="{% url 'contact_page' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <img style="margin-left: 50px;" src="{% static 'img/logo/oyostatelogo.jpg' %}" alt="">
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Infrastructure</li>
+            <li data-filter=".filter-product">Agriculture</li>
+            <li data-filter=".filter-branding">Empowerment</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/01.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>100 Days In Office</h4>
+                <p>Projects Done in 100 Days</p>
+                <a href="assets/img/pic/01.jpg" title="App 1"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/02.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Care</h4>
+                <p>Program on Health Sentisization</p>
+                <a href="assets/img/pic/02.jpg" title="App 1"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/03.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>MOU Signing</h4>
+                <p>Partnering with International bodies</p>
+                <a href="assets/img/pic/03.jpg" title="Product 1"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/04.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Borehole Project</h4>
+                <p>Launching of Borehole project</p>
+                <a href="assets/img/pic/04.jpg" title="Branding 1"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/05.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Road Project Inspection</h4>
+                <p>Inspection of road projects</p>
+                <a href="assets/img/pic/05.jpg" title="App 2"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/06.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Grading of Road</h4>
+                <p>Grading of major roads</p>
+                <a href="assets/img/pic/06.jpg" title="Product 2"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/07.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Care Project</h4>
+                <p>Hosting Healthcare Programs</p>
+                <a href="assets/img/pic/07.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/08.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Foundation Laying</h4>
+                <p>Laying of awesome foundation</p>
+                <a href="assets/img/pic/08.jpg" title="App 3"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/09.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Securit Enhancement</h4>
+                <p>Enhancing and Strethening of Security</p>
+                <a href="assets/img/pic/09.jpg" title="Product 3"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/10" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>100 Days In Office</h4>
+                <p>Projects Done in 100 Days</p>
+                <a href="assets/img/pic/11.jpg" title="App 1"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/12.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Care</h4>
+                <p>Program on Health Sentisization</p>
+                <a href="assets/img/pic/12.jpg" title="App 1"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>MOU Signing</h4>
+                <p>Partnering with International bodies</p>
+                <a href="assets/img/pic/13.jpg" title="Product 1"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/14.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Borehole Project</h4>
+                <p>Launching of Borehole project</p>
+                <a href="assets/img/pic/14.jpg" title="Branding 1"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/15.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Road Project Inspection</h4>
+                <p>Inspection of road projects</p>
+                <a href="assets/img/pic/15.jpg" title="App 2"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/16.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Grading of Road</h4>
+                <p>Grading of major roads</p>
+                <a href="assets/img/pic/16.jpg" title="Product 2"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/17.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Care Project</h4>
+                <p>Hosting Healthcare Programs</p>
+                <a href="assets/img/pic/17.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/pic/18.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Foundation Laying</h4>
+                <p>Laying of awesome foundation</p>
+                <a href="assets/img/pic/18.jpg" title="App 3"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/pic/19.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Securit Enhancement</h4>
+                <p>Enhancing and Strethening of Security</p>
+                <a href="assets/img/pic/19.jpg" title="Product 3"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/20.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/pic/20.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/21.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/pic/21.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/22.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/pic/22.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/23.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/pic/23.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/pic/24.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Empoerment Program</h4>
+                <p>Empowering the people of Akinyele</p>
+                <a href="assets/img/pic/24.jpg" title="Branding 2"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+
+          </div><!-- End Portfolio Container -->
+          
+
+        </div>
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+        <h2>The Video of our past works</h2>
+        <p> Watch Some of the projects we have done and our achievements over the past years.</p>
+        </div><!-- End Section Title -->
+        <!-- AUTOPLAY YOUTUBE SECTION (responsive, muted autoplay + unmute button) -->
+        <section id="hero-video" class="video-section" aria-label="Intro video">
+          <div class="video-wrap">
+            <!-- YouTube embed: autoplay=1 & mute=1 for autoplay to work in most browsers -->
+            <iframe id="yt-autoplay"
+              src="https://www.youtube.com/embed/2k-UWbSHHGQ?autoplay=1&mute=1&rel=0&controls=1&playsinline=1"
+              title="Intro video" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen></iframe>
+
+            <!-- Overlay controls (Play/Unmute) -->
+            <button id="video-unmute-btn" class="video-unmute" aria-label="Unmute video">
+              ▶️ Play with sound
+            </button>
+          </div>
+        </section>
+
+      </div>
+    </section><!-- /Portfolio Section -->
+
+  </main>
+
+    <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Akinyele Local Government</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>P.O.Box 515 Ojo-Moniya</p>
+            <p>Akinyele LG Secretariate, Moniya, Ibadan, Oyo State</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+234 7068 186 943, </span> <br><span>+234 8139 040 991</span>
+            </p>
+            <p><strong>Email:</strong> <span>akinyelelgc@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Work-Done</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Work-Done/Projects</h4>
+          <ul>
+            <li><a href="#">FS4A Project for Food Safety</a></li>
+            <li><a href="#">Agribusiness Industrial Hubs</a></li>
+            <li><a href="#">Infrastructure Development</a></li>
+            <li><a href="#">Road Infrastructure</a></li>
+            <li><a href="#">Ilutuntun City Project</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our progress and opportunities</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Akinyele Local Government</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://ormddatalab.bss.design/">Ormd-Datalab</a> Managed by <a
+          href="https://www.linkedin.com/in/olaniyan-remilekun-a40032187">Olaniyan Remilekun Desmond</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <!-- Main JS File -->
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
