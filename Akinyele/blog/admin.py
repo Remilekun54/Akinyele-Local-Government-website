@@ -3,7 +3,7 @@
 # blog/admin.py
 
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -15,3 +15,17 @@ class PostAdmin(admin.ModelAdmin):
     raw_id_fields = ('author',) # Use a search widget for author selection
     date_hierarchy = 'publish_date'
     ordering = ('-publish_date',)
+
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'post', 'created_on', 'active')
+    list_filter = ('active', 'created_on')
+    search_fields = ('name', 'email', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        # Action to quickly approve comments
+        queryset.update(active=True)
+    approve_comments.short_description = "Approve selected comments"
