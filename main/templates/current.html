@@ -312,22 +312,66 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  
 
   <!-- Vendor JS Files -->
 
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  
+  <script>
+    window.difyChatbotConfig = {
+      token: 'J5Tw62OzkUdDSivP',
+      inputs: {
+        // You can define the inputs from the Start node here
+        // key is the variable name
+        // e.g.
+        // name: "NAME"
+      },
+      systemVariables: {
+        // user_id: 'YOU CAN DEFINE USER ID HERE',
+        // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+      },
+      userVariables: {
+        // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
+        // name: 'YOU CAN DEFINE USER NAME HERE',
+      },
+    }
+  </script>
+  <script src="https://udify.app/embed.min.js" id="J5Tw62OzkUdDSivP" defer>
+  </script>
+  <style>
+  /* ✅ Customize chatbot bubble button */
+  #dify-chatbot-bubble-button {
+    background-color: #2ae149 !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 100px !important; /* ← move left from the right edge */
+    z-index: 9999 !important; /* keep above other elements */
+  }
+
+  /* ✅ Chat window style */
+  #dify-chatbot-bubble-window {
+    position: fixed !important;
+    bottom: 60px !important;
+    right: 100px !important; /* align with the moved button */
+    width: 24rem !important;
+    height: 40rem !important;
+    margin: 0 !important;
+    top: auto !important;
+    left: auto !important;
+  }
+</style>
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}" defer></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}" defer></script>
+  <script src="{% static 'vendor/aos/aos.js' %}" defer></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}" defer></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}" defer></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}" defer></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}" defer></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}" defer></script>
   <!-- Main JS File -->
 
-  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
 
 </body>
 
