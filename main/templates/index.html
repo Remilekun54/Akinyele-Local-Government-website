@@ -129,7 +129,7 @@
                   heritage while fearlessly building the future, forging a path of progress that uplifts every
                   resident.
                 </p>
-                <a href="about.html" class="btn-get-started align-self-start">Read More</a>
+                <a href="{% url 'about' %}" class="btn-get-started align-self-start">Read More</a>
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@
                   Our community is a welcoming home for all, a powerful force fueling the economic engine of
                   Oyo State with commerce, agriculture, and shared prosperity.
                 </p>
-                <a href="about.html" class="btn-get-started">Read More</a>
+                <a href="{% url 'about' %}" class="btn-get-started">Read More</a>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@
                   strategic projects that are not just promises but tangible realities, laying the foundation
                   for a legacy of prosperity and well-being for generations to come.
                 </p>
-                <a href="about.html" class="btn-get-started">Read More</a>
+                <a href="{% url 'about' %}" class="btn-get-started">Read More</a>
               </div>
             </div>
           </div>
@@ -218,12 +218,7 @@
               <p>Our Vision is to be the most prosperous and progressive local government in Oyo State, driven by a
                 commitment to good governance, sustainable development, and community well-being.</p>
 
-              <div class="watch-video d-flex align-items-center position-relative">
-                <i class="bi bi-play-circle"></i>
-                <a href="https://www.youtube.com/embed/2k-UWbSHHGQ?autoplay=1&mute=1&rel=0&controls=1&playsinline=1"
-                  class="glightbox stretched-link">Watch Video</a>
-
-              </div>
+              
             </div>
           </div>
 
@@ -250,7 +245,7 @@
                 </svg>
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3>Infrastructural Projects</h3>
               </a>
               <p style="text-align: justify; font-size: 14px;">We have transformed our communities with impactful
@@ -281,7 +276,7 @@
                 </svg>
                 <i class="bi bi-chat-square-text"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3>HEALTH</h3>
               </a>
               <p style="text-align: justify; font-size: 14px;">We improved healthcare through free schemes,
@@ -296,7 +291,7 @@
                 <li>✅ Regular Sensitization on Good Hygiene across Markets</li>
                 <li>✅ Sensitization on Gender Based Violence across Akinyele L.G Markets</li>
               </ul>
-              <a href="service-details.html" class="stretched-link"></a>
+              <a href="{% url 'service_details' %}" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -310,7 +305,7 @@
                 </svg>
                 <i class="bi bi-bounding-box-circles"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3> COMMUNITY ENGAGEMENT </h3>
               </a>
               <p style="text-align: justify; font-size: 14px;">We engaged traditional leaders, supported communities,
@@ -323,7 +318,7 @@
                 <li>✅ Presentation of Community Registration Certificate to Various Communities</li>
                 <li>✅ Provision of office equipment to CDC Excos</li>
               </ul>
-              <a href="service-details.html" class="stretched-link"></a>
+              <a href="{% url 'service_details' %}" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -338,7 +333,7 @@
                 </svg>
                 <i class="bi bi-easel"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3>ECONOMY (TRADE, COMMERCE\IGR)</h3>
               </a>
 
@@ -364,7 +359,7 @@
                 </svg>
                 <i class="bi bi-calendar4-week icon"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3>ENERGY</h3>
               </a>
               <p style="text-align: justify; font-size: 14px;">We provided electricity, solar installations, and
@@ -376,7 +371,7 @@
                 <li>✅ Rural electrification</li>
                 <li>✅ Provision of Cash Support for electrification of Various Communities</li>
               </ul>
-              <a href="service-details.html" class="stretched-link"></a>
+              <a href="{% url 'service_details' %}" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -393,7 +388,7 @@
                 </svg>
                 <i class="bi bi-broadcast"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'service_details' %}" class="stretched-link">
                 <h3>Empowerment</h3>
               </a>
               <p style="text-align: justify; font-size: 14px;">We empowered widows, youths, and residents through
@@ -442,7 +437,7 @@
                 <p>Projects Done in 100 Days</p>
                 <a href=" {% static 'img/pic/02.jpg' %}" title="App 1" data-gallery="portfolio-gallery-app"
                   class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -455,7 +450,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-2.jpg' %}" title="Product 1"
                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -468,7 +463,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-3.jpg' %} " title="Branding 1"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -480,7 +475,7 @@
                 <p>Inspection of road projects</p>
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-4.jpg' %} " title="App 2"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -493,7 +488,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-5.jpg' %} " title="Product 2"
                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -506,7 +501,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-6.jpg' %}" title="Branding 2"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -518,7 +513,7 @@
                 <p>Laying of awesome foundation</p>
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-7.jpg' %} " title="App 3"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -531,7 +526,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-8.jpg' %} " title="Product 3"
                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -544,7 +539,7 @@
                 <a href=" {% static 'img/masonry-portfolio/masonry-portfolio-9.jpg' %} " title="Branding 2"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -589,32 +584,21 @@
         <div class="row g-0 clients-wrap">
 
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="{% static 'img/clients/client-1.png' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/clients/oyostatelogo.jpg' %}" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="{% static 'img/clients/client-2.png' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/clients/iita.jpeg' %}" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src=" {% static 'img/clients/client-3.png' %} " class="img-fluid" alt="">
+            <img src=" {% static 'img/clients/niser_logo.webp' %} " class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="{% static 'img/clients/ormd-logo.png' %} " class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src=" {% static 'img/clients/client-5.png' %}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src=" {% static 'img/clients/client-6.png' %} " class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="{% static 'img/clients/client-7.png' %}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src=" {% static 'img/clients/unicornlogo.png' %}" class="img-fluid" alt="">
@@ -633,7 +617,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="{% url 'index' %}" class="logo d-flex align-items-center">
             <span class="sitename">Akinyele Local Government</span>
           </a>
           <div class="footer-contact pt-3">
@@ -654,9 +638,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Work-Done</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'services' %}">Work-Done</a></li>
             <li><a href="#">Terms of service</a></li>
             <li><a href="#">Privacy policy</a></li>
           </ul>
