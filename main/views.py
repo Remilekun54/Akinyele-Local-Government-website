@@ -67,15 +67,3 @@ def blog_details_view(request):
     """Loads the blog-details.html template"""
     return render(request, 'blog-details.html')
 
-def index_view(request):
-    """Loads the index.html template (homepage) and passes the dynamic video ID."""
-    
-    # Define the YouTube video ID here or fetch it from a setting/database
-    current_youtube_id = '2k-UWbSHHGQ' 
-    
-    context = {
-        'video_id': current_youtube_id,
-        # Add other context variables here if needed
-    }
-    
-    return render(request, 'index.html', context)
