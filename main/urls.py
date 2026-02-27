@@ -12,6 +12,7 @@ urlpatterns = [
     path('', views.index_view, name='index'), 
     path('start/', views.start_page_view, name='start_page'),
     path('current/', views.current_view, name='current'),
+    path('book-appointment/', views.book_appointment, name='book_appointment'),
     
     # Content pages
     path('about/', views.about_view, name='about'),

@@ -1,6 +1,22 @@
 # main/views.py
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import AppointmentForm
+
+def book_appointment(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your appointment request has been submitted successfully! We will get back to you soon.')
+            return redirect('book_appointment')
+        else:
+            messages.error(request, 'There was an error in your submission. Please check the form and try again.')
+    else:
+        form = AppointmentForm()
+    
+    return render(request, 'book_appointment.html', {'form': form})
 
 # Home page views
 def index_view(request):
